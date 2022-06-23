@@ -61,12 +61,19 @@ header h2 {
     
 }
 
+/* MAIN SECTION */
+.page-wrapper {
+    max-width: 88%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /* ABOUT ME */
 .aboutme {
     display: flex;
     flex-wrap: wrap;
     padding: 20px;
-    margin: 20px;
+    margin-top: 40px;
 }
 .aboutme p {
     flex: 4 80%;
@@ -75,18 +82,22 @@ header h2 {
 
 /* WORK SECTION */
 .work {
-    display: flex;
+    display: flex;        
     flex-wrap: wrap;
-    
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: stretch;
 }
 /* TRYING TO GET LINKS-GROUP TO ALIGN WITH P AND CONTACT INFO */
 .links-group {
     flex: 4 80%;
+    flex-wrap: wrap;
+    display: flex;
 }
 .work-links {
     color: var(--colorI);
     background-color: var(--colorII);
-    width: 150px;
+    width: 400px;
     margin: 10px;
     margin-left: 20px;
     padding-bottom: 20px;
@@ -98,7 +109,8 @@ header h2 {
     /* to give work-items min/max height */
     min-height: 250px;
     max-height: 250px;
-    min-width: 500px;
+    flex-basis: calc(50% - 30px);
+    /* min-width: 150px; */
 }
 .work-links div {
     background-color: var(--colorII);
@@ -117,7 +129,7 @@ header h2 {
 .runbuddy {
     background-image: url("../images/runbuddy.jpeg");
     min-height: 400px;
-    min-width: 1000px;
+    flex-basis: 100%;
     background-size: cover;
     background-position-x: right; 
 }
